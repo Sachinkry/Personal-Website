@@ -1,26 +1,14 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@500&family=Roboto+Mono:wght@200&display=swap');
 
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+@layer base {
+    html {
+        /* font-family: 'Roboto Mono', monospace; */
+        /* font-family: 'Roboto', sans-serif; */
+        /* font-family: 'Ubuntu', sans-serif; */
+        font-family: 'Noto Sans Mono', monospace;
+    }
   }
-  body {
-    color: white;
-    background: black;
-  }
-}
