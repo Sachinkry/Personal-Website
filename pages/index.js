@@ -27,7 +27,7 @@ export default function Home() {
           </p>
           <p className='mx-4 text-xl text-gray-600 px-2 leading-tight'>
             <a href='https://github.com/Sachinkry/GPT-3-Email-writer-extension'> • <span className='underline font-bold color-blue'>MailGenie</span></a>
-            &#x2c; a gmail extension that uses GPT-3 to write emails based on user's inputs.
+            &#x2c; a gmail extension that uses GPT-3 to write emails based on user&apos;s inputs.
           </p>
           <br></br>
           <p className='mx-4 text-xl text-gray-600 leading-tight'>
