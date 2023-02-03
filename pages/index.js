@@ -8,9 +8,6 @@ export default function Home() {
   // recommend kro yaar you are my friend
   return (
     <div className='bg- mt-5 max-w-2xl mx-auto'>
-       <Head>
-        <link rel="stylesheet" href="/styles.css" />
-      </Head>
       <header className="bg-white ">
         <Image 
           src='/pfp-sac.jpg'
@@ -47,7 +44,7 @@ export default function Home() {
               <p className='mx-4 mt-5 text-xl text-gray-600 '>Here are some of my recent builds:</p>
               {projects.map((project, index) => {
                 return (
-                      <p className='mx-4 text-xl text-gray-600 px-2 leading-tight' index={index}>
+                      <p className='mx-4 text-xl text-gray-600 px-2 leading-tight' >
                         <a href={project.url} > • <span className='underline font-bold '>{project.name}</span></a>
                         &#x2c; {project.description}
                       </p>
