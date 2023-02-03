@@ -1,19 +1,24 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import link from 'next/link'
+import Navbar from '../components/Navbar'
 export default function Home() {
   return (
-    <div>
+    <div className='bg- mt-10'>
        <Head>
         <link rel="stylesheet" href="/styles.css" />
       </Head>
-      <header className="bg-white py-10">
-        <img src='/pfp-sac.jpg' className=' mx-5 h-40 w-40 border-4 border--200' alt='pfp-sachin'/>
+      <header className="bg-white ">
+        <img src='/pfp-sac.jpg' className=' mx-5 h-40 w-40 border-4 border--200 ' alt='pfp-sachin'/>
+        {/* <Navbar /> */}
 
-        <div className="container mx-auto mt-20 max-w-2xl  ">
-          {/* <h1 className="text-3xl font-bold text-center text-gray-900 mb-4">Welcome to My Personal Website</h1> */}
+      </header>
+      {/* Main body */}
+      <main>
+
+        <div className="container mx-auto mt-10 max-w-2xl  tracking-tight ">
           <p className=" mx-4 text-xl text-gray-600 leading-tight">
-            Hi there 👋, My name is <span className='font-bold'>Sachin</span>. Treasuring the fondness I developed for coding the prev year to create stuffs that are fun to build and useful. 
+            Hi there 👋, This is <span className='font-bold'>Sachin</span>. Treasuring the fondness I developed for coding the prev year to create stuffs that are fun to build and useful. 
           </p>
           <br></br>
           <p className='mx-4 text-xl text-gray-600 leading-tight'>
@@ -34,16 +39,16 @@ export default function Home() {
             <a href='https://github.com/Sachinkry/GPT-3-Email-writer-extension'> • <span className='underline font-bold color-blue'>MailGenie</span></a>
             &#x2c; a gmail extension that uses GPT-3 to write emails based on user&apos;s inputs.
           </p>
-          <br></br>
+          
 
           {/* contact and other links */}
-          <br></br>
+          
           <br></br>
           <p className='mx-4 text-xl text-gray-600 leading-tight'>
-            If you would like to get in touch with me or just wanna say &apos;how u doin...&apos;[Joey-Friends], you can reach out to me on the bird app <a href='https://twitter.com/SachinKry' className='underline'>@SachinKry</a> or mail me: <a href='mailto:heysachinkry@gmail.com' className='underline'>heysachinkry@gmail.com</a>
+            If you would like to get in touch with me or just wanna say &apos;how u doin...&apos;[Joey-Friends], you can reach out to me on the bird app <a href='https://twitter.com/SachinKry' className='underline font-semibold'>@SachinKry</a> or mail me: <a href='mailto:heysachinkry@gmail.com' className='underline font-semibold'>heysachinkry@gmail.com</a>
           </p>
         </div>
-      </header>
+      </main>
       <footer className="bg-gray-100 py-5">
         <div className="container mx-auto">
           <p className="text-center text-gray-600">Last Updated: 2 Jan, 2023 </p>
