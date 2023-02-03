@@ -4,7 +4,7 @@ import projects from '../data/projects'
 import Image from 'next/image'
 
 export default function Home() {
-  
+ 
   // recommend kro yaar you are my friend
   return (
     <div className='bg- mt-10 max-w-2xl mx-auto'>
@@ -24,7 +24,7 @@ export default function Home() {
 
         <div className="container mx-auto mt-10   tracking-tight ">
           <p className=" mx-4 text-xl text-gray-600 leading-tight mt-5">
-            Hi there 👋, This is <span className='font-bold'>Sachin</span>. I treasure the fondness I developed for coding last year to build stuffs that are useful, and fun <span className='font-semibold'>&#91;</span>umm.. actually involves smashing head on the keyboard & some &apos;aha&apos; moments<span className='font-semibold'>&#93;</span>. 
+            Hi there 👋, This is <span className='font-bold'>Sachin</span>. I treasure the fondness I developed for coding last year to create stuffs that are useful, and fun to build <span className='font-semibold'>&#91;</span>umm.. actually involves smashing head on the keyboard & some &apos;aha&apos; moments<span className='font-semibold'>&#93;</span>. 
           </p>
           {/* <br></br> */}
           <p className='mx-4 mt-5 text-xl text-gray-600 leading-tight'>
