@@ -7,7 +7,7 @@ export default function Home() {
   
   // recommend kro yaar you are my friend
   return (
-    <div className='bg- mt-5 max-w-2xl mx-auto'>
+    <div className='bg- mt-10 max-w-2xl mx-auto'>
       <header className="bg-white ">
         <Image 
           src='/pfp-sac.jpg'
@@ -24,7 +24,7 @@ export default function Home() {
 
         <div className="container mx-auto mt-10   tracking-tight ">
           <p className=" mx-4 text-xl text-gray-600 leading-tight mt-5">
-            Hi there 👋, This is <span className='font-bold'>Sachin</span>. I treasure the fondness I developed for coding last year to build stuffs that are useful, and fun <span className='font-semibold'>&#91;</span>umm.. actually involves smashing my head on the keyboard & some &apos;aha&apos; moments<span className='font-semibold'>&#93;</span>. 
+            Hi there 👋, This is <span className='font-bold'>Sachin</span>. I treasure the fondness I developed for coding last year to build stuffs that are useful, and fun <span className='font-semibold'>&#91;</span>umm.. actually involves smashing head on the keyboard & some &apos;aha&apos; moments<span className='font-semibold'>&#93;</span>. 
           </p>
           {/* <br></br> */}
           <p className='mx-4 mt-5 text-xl text-gray-600 leading-tight'>
@@ -41,10 +41,10 @@ export default function Home() {
           {/* projects */}
           <div className=''>
 
-              <p className='mx-4 mt-5 text-xl text-gray-600 '>Here are some of my recent builds:</p>
+              <p className='mx-4 mt-5 mb-1 text-xl text-gray-600 '>Here are some of my recent builds:</p>
               {projects.map((project, index) => {
                 return (
-                      <p key={index} className='mx-4 text-xl text-gray-600 px-2 leading-tight' >
+                      <p key={index} className='mx-4 my-2 text-xl text-gray-600 px-2 leading-tight' >
                         <a href={project.url} > • <span className='underline font-bold '>{project.name}</span></a>
                         &#x2c; {project.description}
                       </p>
@@ -56,7 +56,7 @@ export default function Home() {
 
           {/* contact and other links */}         
           <p className='mx-4 mt-5 text-xl text-gray-600 leading-tight mb-4'>
-            If you would like to get in touch with me or just wanna say &apos;how u doin...&apos;[Joey-Friends],  reach out to me on the bird app <a href='https://twitter.com/SachinKry' className='underline font-semibold'>@SachinKry</a> or mail me: <a href='mailto:heysachinkry@gmail.com' className='underline font-semibold'>heysachinkry@gmail.com</a>
+            If you would like to get in touch with me or just wanna say &apos;how u doin...&apos;[yup.. Joey-Friends],  reach out to me on the bird app <a href='https://twitter.com/SachinKry' className='underline font-semibold'>@SachinKry</a> or mail me: <a href='mailto:heysachinkry@gmail.com' className='underline font-semibold'>heysachinkry@gmail.com</a>
           </p>
         </div>
       </main>
