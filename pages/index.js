@@ -56,7 +56,7 @@ export default function Home() {
 
           {/* contact and other links */}         
           <p className='mx-4 mt-5 text-xl text-gray-600 leading-tight mb-4'>
-            If you would like to get in touch with me or just wanna say &apos;how u doin...&apos;[yup.. Joey-Friends],  reach out to me on the bird app <a href='https://twitter.com/SachinKry' className='underline font-semibold'>@SachinKry</a> or mail me: <a href='mailto:heysachinkry@gmail.com' className='underline font-semibold'>heysachinkry@gmail.com</a>
+            If you would like to get in touch with me or just wanna say &apos;how u doin...&apos;[Joey-Friends],  reach out to me on the bird app <a href='https://twitter.com/SachinKry' className='underline font-semibold'>@SachinKry</a> or mail me: <a href='mailto:heysachinkry@gmail.com' className='underline font-semibold'>heysachinkry@gmail.com</a>
           </p>
         </div>
       </main>
