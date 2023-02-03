@@ -8,6 +8,7 @@ export default function Home() {
         <link rel="stylesheet" href="/styles.css" />
       </Head>
       <header className="bg-white py-10">
+        <img src='/pfp-sac.jpg' className=' mx-5 h-40 w-40 border-4 border--200' alt='pfp-sachin'/>
 
         <div className="container mx-auto mt-20 max-w-2xl  ">
           {/* <h1 className="text-3xl font-bold text-center text-gray-900 mb-4">Welcome to My Personal Website</h1> */}
@@ -17,6 +18,10 @@ export default function Home() {
           <br></br>
           <p className='mx-4 text-xl text-gray-600 leading-tight'>
             This year I would be exploring AI and ML stuffs like NLP, LLMs and others to build cool shits.
+          </p>
+          <br></br>
+          <p className='mx-4 text-xl text-gray-600 leading-tight'>
+            When I am not coding I enjoy <a href='https://www.goodreads.com/user/show/148280232?ref=nav_profile_l' className='underline'>reading</a>, listening to <a href='https://youtube.com/playlist?list=PLX3ti02JFmSGG71oOKr7N760J8QTHkjKy ' className='underline'>music</a>, watching <a href='https://zoro.to/home' className='underline'>animes</a> and <a href='https://twitter.com/SachinKry/status/1497952709890035712?s=20&t=wVn3EJJZOaLy-TjpWSjuNg' className='underline'>drawing</a> simple stuffs.
           </p>
           <br></br>
           <p className='mx-4 text-xl text-gray-600 '>Here are some of my builds:</p>
@@ -30,9 +35,6 @@ export default function Home() {
             &#x2c; a gmail extension that uses GPT-3 to write emails based on user&apos;s inputs.
           </p>
           <br></br>
-          <p className='mx-4 text-xl text-gray-600 leading-tight'>
-            When I am not coding I enjoy <a href='https://www.goodreads.com/user/show/148280232?ref=nav_profile_l' className='underline'>reading</a>, listening to <a href='https://youtube.com/playlist?list=PLX3ti02JFmSGG71oOKr7N760J8QTHkjKy ' className='underline'>music</a>, watching <a href='https://zoro.to/home' className='underline'>animes</a> and <a href='https://twitter.com/SachinKry/status/1497952709890035712?s=20&t=wVn3EJJZOaLy-TjpWSjuNg' className='underline'>drawing</a> simple stuffs.
-          </p>
 
           {/* contact and other links */}
           <br></br>
