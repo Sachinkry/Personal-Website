@@ -44,7 +44,7 @@ export default function Home() {
               <p className='mx-4 mt-5 text-xl text-gray-600 '>Here are some of my recent builds:</p>
               {projects.map((project, index) => {
                 return (
-                      <p className='mx-4 text-xl text-gray-600 px-2 leading-tight' >
+                      <p key={index} className='mx-4 text-xl text-gray-600 px-2 leading-tight' >
                         <a href={project.url} > • <span className='underline font-bold '>{project.name}</span></a>
                         &#x2c; {project.description}
                       </p>
