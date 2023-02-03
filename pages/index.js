@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Navbar from '../components/Navbar'
 import projects from '../data/projects'
+import Image from 'next/image'
 
 export default function Home() {
   
@@ -11,7 +12,14 @@ export default function Home() {
         <link rel="stylesheet" href="/styles.css" />
       </Head>
       <header className="bg-white ">
-        <img src='/pfp-sac.jpg' className=' mx-5 h-40 w-40 border-1 border--200 shadow-lg' alt='pfp-sachin'/>
+        {/* <img src='/pfp-sac.jpg' className=' mx-5 h-40 w-40 border-1 border--200 shadow-lg' alt='pfp-sachin'/> */}
+        <Image 
+          src='/pfp-sac.jpg'
+          alt='pfp-sachin'
+          width={200}
+          height={200}
+          className=' mx-5 h-40 w-40 border-1 border--200 shadow-lg'
+        />
         {/* <Navbar /> */}
 
       </header>
