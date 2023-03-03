@@ -24,7 +24,7 @@ export default function Home() {
 
         <div className="container mx-auto mt-10   tracking-tight ">
           <p className=" mx-4 text-xl text-gray-600 leading-tight mt-5">
-            Hi there 👋, This is <span className='font-bold'>Sachin</span>. I treasure the fondness I developed for coding last year to build stuffs that are useful, and fun <span className='font-semibold'>&#91;</span>umm.. actually involves smashing head on the keyboard & some &apos;aha&apos; moments<span className='font-semibold'>&#93;</span>. 
+            👋, This is <span className='font-bold'>Sachin</span>. I treasure the fondness I developed for coding last year to build stuffs that are useful, and fun <span className='font-semibold'>&#91;</span>umm.. actually involves smashing head on the keyboard & some &apos;aha&apos; moments<span className='font-semibold'>&#93;</span>. 
           </p>
           {/* <br></br> */}
           <p className='mx-4 mt-5 text-xl text-gray-600 leading-tight'>
