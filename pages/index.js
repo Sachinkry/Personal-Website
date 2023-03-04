@@ -14,7 +14,7 @@ export default function Home() {
     <div className={`${isDark ? 'bg-gray-900 text-white': ''} snap-y snap-mandatory h-screen overflow-scroll z-0`}>
       
       <Head>
-        <title>Sachin's Portfolio</title>
+        <title>Personal Website</title>
       </Head>
 
 

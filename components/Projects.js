@@ -30,7 +30,7 @@ function Projects() {
           return (
             <div 
               className=''
-              
+              key={i}
             >
               <motion.div 
                 className='w-96 text-center flex flex-col snap-center space-y-4 items-center  flex-shrink-0 justify-center p-16 md:p-44 h-90 max-w-5xl'
