@@ -35,7 +35,7 @@ export default function Hero() {
                     Follow me on this journey as I 
                     share my experiences, insights, and random musings about life and tech.
                  </p>
-                {/* <p className=''>I cherish the fondness I developed for coding last year and since then, I have learned web development. Now I mostly use next.js and tailwind CSS to build my projects.</p> */}
+                
                 <div className='flex justify-center  w-full'>
                   <div className='border border-gray-200 w-1/2 '/>
                 </div>
