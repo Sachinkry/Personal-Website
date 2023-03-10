@@ -1,8 +1,8 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import projects from '../data/projects'
+import projects from '../../data/projects'
 import Image from 'next/image'
-import ImagePic from './Image'
+import ImagePic from '../Image'
 
 function Projects() {
   return (

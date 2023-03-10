@@ -3,7 +3,11 @@
 @tailwind utilities;
 
 /* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@500&family=Roboto+Mono:wght@200&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=Source+Sans+Pro&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=PT+Serif&family=Source+Sans+Pro&display=swap');
+
+
 
 @layer base {
     html {
@@ -13,7 +17,10 @@
         /* font-family: 'Noto Sans Mono', monospace; */
         /* letter-spacing: 1px; */
         /* font-family: Proxima Nova, sans-serif; */
-        font-family: 'PT Sans', sans-serif;
+        /* font-family: 'PT Sans', sans-serif; */
+        /* font-family: 'Source Sans Pro', sans-serif; */
+        font-family: 'PT Serif', serif;
+
     }
   }
 
