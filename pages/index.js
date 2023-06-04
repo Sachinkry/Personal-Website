@@ -31,7 +31,7 @@ export default function Home() {
               I also enjoy listening to <a href={adminData.music} className='text-mediumGreen underline'>music</a>, watching anime, <a href={adminData.drawing} className='text-mediumGreen underline'>drawing</a> simple stuffs, and to write as well.
             </p>
         </div>
-        <p className="">If you would like to get in touch or just wanna say 'how u doin...'[Joey-Friends], reach out to me on the bird app <a href={adminData.twitter} className='text-mediumGreen underline'>@SachinKry</a> or mail me: <a href={`mailto:${adminData.email}`} className='text-mediumGreen underline'>heysachinky@gmail.com</a></p>
+        <p className="">If you would like to get in touch or just wanna say &apos;how u doin...&apos;[Joey-Friends], reach out to me on the bird app <a href={adminData.twitter} className='text-mediumGreen underline'>@SachinKry</a> or mail me: <a href={`mailto:${adminData.email}`} className='text-mediumGreen underline'>heysachinky@gmail.com</a></p>
     </div>
     
       <LastUpdate />
