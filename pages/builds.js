@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar'
 import LastUpdate from '../components/LastUpdate'
 import projects from '../data/projects'
 import Footer from '../components/Footer'
+import {adminData} from '../data/adminData'
 
 function builds() {
   return (
@@ -18,14 +19,14 @@ function builds() {
                 return (
 
                   <div key={i}>
-                    <p className='w-full text-lg leading-snug text-darkGray '><span><a className='text-lightBrown underline underline-offset-2 cursor-ponter' href={project.url}>{project.name}</a></span>
+                    <p className='w-full text-lg leading-snug text-darkGray '><span><a className='text-mediumGreen underline underline-offset-2 cursor-ponter' href={project.url}>{project.name}</a></span>
                     ,  {project.description}
                     </p>
                   </div>
                 )
               })}
             </div>
-            <p className='text-lightBrown'>See more on github...</p>
+            <p className='text-mediumGreen'>See more on github... <a className='underline underline-offset-2' href={adminData.github}>[here]</a></p>
         </div>
       </div>
         <LastUpdate />

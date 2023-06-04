@@ -3,7 +3,7 @@ const projects =
     {
         "name": "BookBeats",
         "description": "A gpt-3 powered web-app which recommends songs that vibe with your favorite books.",
-        "url": "https://BookBeats.sachinkry.repl.co",
+        "url": "https://github.com/Sachinkry/readingmood",
     },{
         "name": "Discord-faucet-bot",
         "description": "A bot that can be used to send testnet tokens to discord users.",
