@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
-function builds() {
+function Builds() {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
@@ -54,4 +54,4 @@ function builds() {
   )
 }
 
-export default builds
+export default Builds

@@ -3,7 +3,7 @@ import LastUpdate from '../components/LastUpdate'
 import Navbar from '../components/Navbar'
 import TwitterThreads from '../components/TwitterThreads'
 
-function writes() {
+function Writes() {
   return (
     <div className='flex flex-col space-y-12   items-center justify-start px-9 py-16 bg-white max-w-2xl mx-auto '>
       <Navbar />
@@ -19,4 +19,4 @@ function writes() {
   )
 }
 
-export default writes
+export default Writes
