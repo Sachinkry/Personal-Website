@@ -25,9 +25,12 @@ export default function TwitterThreads() {
                 // console.log(thread);
                 return (
                   <div key={i} className=''>
+                    <a href={thread.url}>
+
                     <p className='text-mediumGreen '>
                       {thread.title}
                     </p>
+                    </a>
                     <p className='text-sm text-gray-400 mb-3'>{thread.date}</p>
                     <hr className="border-t-1 border-gray-200" />
                   </div>
