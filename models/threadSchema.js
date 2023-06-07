@@ -1,26 +1,10 @@
-const mongoose = require('mongoose');
+import {mongoose, models, model} from 'mongoose';
 
 const threadSchema = new mongoose.Schema({
   
-  title: {
-    type: String,
-    required: true,
-  },
-  description: {
-    type: String,
-    required: true,
-  },
-  url: {
-    type: String,
-    required: true,
-  },
-  date: {
-    type: Date,
-    required: true,
-    default: Date.now,
-  },
+  title: String,
+  url: String,
+  date: String,
 });
 
-const Thread = mongoose.model('Thread', threadSchema);
-
-module.exports = Thread;
+export default models.Thread || model('Thread', threadSchema);

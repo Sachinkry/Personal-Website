@@ -27,6 +27,18 @@ p {
     @apply w-full text-lg leading-snug text-gray-600;
 }
 
+input, textarea {
+    @apply border-2 border-gray-200 rounded-md px-2 py-1 text-gray-700 w-full;
+    @apply mb-2;
+}
+
+input:focus, textarea:focus {
+    @apply outline-none border-gray-500 text-gray-700;
+}
+
+label {
+    @apply text-gray-500;
+}
 /* @layer components {
     .heroButton {
         @apply px-6 py-2 border border-[#242424] rounded rounded-full text-xs uppercase tracking-widest text-gray-500 transition-all hover:border-[#242424]/40 hover: text-[#F7AB0A]/40

@@ -1,14 +1,21 @@
-import Head from 'next/head'
 
 import Navbar from '../components/Navbar'
 import ImagePic from '../components/Image'
-import Footer from '../components/Footer'
 import LastUpdate from '../components/LastUpdate'
-import {adminData} from '../data/adminData'
+import axios from 'axios'
+import { useState, useEffect } from 'react'
 
 export default function Home() {
-  const isDark = false
-  console.log(adminData)
+  const [adminData, setAdminData] = useState([]);
+
+  useEffect(() => {
+    axios.get("api/admin").then((res) => {
+      const adminData = res.data[0];
+      setAdminData(adminData);
+      // console.log(adminData);
+    })
+  }, [])
+
   
   return (
 
