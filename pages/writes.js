@@ -7,14 +7,10 @@ function Writes() {
   return (
     <div className='flex flex-col space-y-12   items-center justify-start px-8 py-16 bg-white max-w-xl mx-auto '>
       <Navbar />
-      <div className="flex flex-col space-y-3.5 items-center justify-start   bg-white leading-snug w-full">
-      <div className="flex flex-col space-y-5 justify-start w-full">
-        <h1 className="w-sm text-4xl font-semibold  leading-snug text-gray-600 ">Threads</h1>
-        
-        <TwitterThreads />
-      </div>
-      </div>
-      <LastUpdate />
+
+      {/* // do not load the page until the thread data is fetched */}
+      <TwitterThreads />
+      
     </div>
   )
 }

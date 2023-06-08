@@ -9,11 +9,15 @@ export default function Home() {
   const [adminData, setAdminData] = useState([]);
 
   useEffect(() => {
-    axios.get("api/admin").then((res) => {
-      const adminData = res.data[0];
-      setAdminData(adminData);
-      // console.log(adminData);
-    })
+    try {
+      axios.get("api/admin").then((res) => {
+        const adminData = res.data[0];
+        setAdminData(adminData);
+        // console.log(adminData);
+      })
+    } catch (error) {
+      console.log("error from admin-api:::::", error);
+    }
   }, [])
 
   
