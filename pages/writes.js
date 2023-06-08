@@ -5,7 +5,7 @@ import TwitterThreads from '../components/TwitterThreads'
 
 function Writes() {
   return (
-    <div className='flex flex-col space-y-12   items-center justify-start px-9 py-16 bg-white max-w-2xl mx-auto '>
+    <div className='flex flex-col space-y-12   items-center justify-start px-8 py-16 bg-white max-w-xl mx-auto '>
       <Navbar />
       <div className="flex flex-col space-y-3.5 items-center justify-start   bg-white leading-snug w-full">
       <div className="flex flex-col space-y-5 justify-start w-full">

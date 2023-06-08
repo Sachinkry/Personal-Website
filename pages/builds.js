@@ -18,7 +18,7 @@ function Builds() {
 
 
   return (
-    <div className='flex flex-col space-y-12   items-center justify-center px-9 py-16 bg-white max-w-2xl mx-auto '>
+    <div className='flex flex-col space-y-12   items-center justify-center px-8 py-16 bg-white max-w-xl mx-auto '>
       <Navbar />
       <div className="inline-flex flex-col space-y-5 items-center justify-end   bg-white leading-snug">
         
