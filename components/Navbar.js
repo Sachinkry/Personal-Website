@@ -20,9 +20,10 @@ export default function Navbar() {
                 <Link href="/builds">
                   <p className={`${(pathname === '/builds') ? 'text-mediumGreen': 'text-darkGray'}  text-lg font-semibold leading-snug underline pr-3 sm:pr-15 `}>builds</p>
                 </Link>
-                {/* <Link href="/reads"> */}
-                  <a className={`  text-lg font-semibold leading-snug underline text-darkGray pr-3 sm:pr-15 `} href='https://curius.app/sachin-kumar-yadav'>reads</a>
-                {/* </Link> */}
+                {/* <Link href="/reads">
+                  <p className={`${(pathname === '/reads') ? 'text-mediumGreen': 'text-darkGray'}  text-lg font-semibold leading-snug underline pr-3 sm:pr-15 `}>reads</p>
+                </Link> */}
+                
                 <Link href="/writes">
                   <p className={`${(pathname === '/writes') ? 'text-mediumGreen': 'text-darkGray'}  text-lg font-semibold leading-snug underline pr-3 sm:pr-15 `}>writes</p>
                 </Link>

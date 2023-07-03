@@ -31,7 +31,7 @@ export default function TwitterThreads() {
             <div>
               <h1 className="text-4xl font-semibold leading-snug text-gray-600">Threads</h1>
             </div>
-            <div className="space-y-4">
+            <div className="space-y-4 pb-6">
               {/* <Link href="/subPages/addNewThread">
                 <p className="bg-gray-300 rounded-lg px-4 py-2 text-sm hover:bg-gray-400 shadow-md hover:text-white">
                   Add new thread
