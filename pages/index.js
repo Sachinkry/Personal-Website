@@ -19,6 +19,9 @@ export default function Home() {
       console.log("error from admin-api:::::", error);
     }
   }, [])
+  // here the html code for quote is written
+  // you need to convert - into 
+  const quote = <p className="text-sm text-gray-400 mb-2  "><i>&quot;For the sake of winning... I should destroy everything about myself... I shall be reborn... as many times as I need.&quot; </i><span className='ml-6 text-semibold '>&ndash; Yoichi Isagi</span></p>
 
   
   return (
@@ -29,7 +32,8 @@ export default function Home() {
         
         <div className='w-full flex text-4xl'>
           {/* <ImagePic /> */}
-          <h1 className='text-4xl font-semibold leading-snug text-gray-600'>Me</h1>
+          {quote}
+          {/* <h1 className='text-4xl font-semibold leading-snug text-gray-600'>Me</h1> */}
         </div>
         <div className="flex flex-col space-y-4 items-center justify-center w-full ">
             <p className="">Hi there  👋, this is <span className='font-semibold'>Sachin Yadav</span>. It&apos;s great to have you here. Come on in and explore my digital realm to your heart&apos;s content.</p>
@@ -38,7 +42,7 @@ export default function Home() {
            
             <p className="">When I am not coding I read <a href={adminData.goodreads} className='text-mediumGreen underline'>[book-shelf]</a>, listen to <a href={adminData.music} className='text-mediumGreen underline'>music</a>, watch anime, <a href={adminData.drawing} className='text-mediumGreen underline'>draw</a> simple stuffs, or scribble down my thoughts.</p>
             
-            <p className="">If you would like to get in touch or just wanna say &apos;<i>how u doin...</i>&apos;, reach out to me on the bird app <a href={adminData.twitter} className='text-mediumGreen underline'>@SachinKry</a> or mail me: <a href={`mailto:${adminData.email}`} className='text-mediumGreen underline'>heysachinky@gmail.com</a></p>
+            <p className="">If you would like to get in touch or just wanna say &apos;how u doin...&apos;, reach out to me on the bird app <a href={adminData.twitter} className='text-mediumGreen underline'>@SachinKry</a> or mail me: <a href={`mailto:${adminData.email}`} className='text-mediumGreen underline'>heysachinky@gmail.com</a></p>
         </div>
     </div>
     
