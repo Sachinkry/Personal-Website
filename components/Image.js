@@ -19,7 +19,7 @@ function ImagePic() {
         // }}
     >
         <Image 
-          src='/lofi-pfp.png'
+          src='/pfp-sac.jpg'
           alt='pfp-sachin'
           width={130}
           height={138}

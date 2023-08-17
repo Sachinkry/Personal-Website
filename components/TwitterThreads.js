@@ -21,9 +21,9 @@ export default function TwitterThreads() {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-start bg-white leading-snug   w-full ">
+    <div className="flex flex-col items-center justify-start  leading-snug   w-full ">
       {loading ? (
-        <div className="flex flex-col items-center justify-start bg-white leading-snug">
+        <div className="flex flex-col items-center justify-start  leading-snug">
           <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-mediumGreen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" />
         </div>
       ) : (

@@ -8,6 +8,7 @@ function Footer() {
                 <p className="text-darkGray">Made by Sachin, © 2023 </p>
 
             </div>
+            
         </footer>
     
   )
