@@ -1,10 +1,8 @@
 
-import Navbar from '../components/Navbar'
 import ImagePic from '../components/Image'
 import LastUpdate from '../components/LastUpdate'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
-import DarkMode from '../components/DarkMode'
 import Layout from '../components/Layout'
 
 export default function Home() {
