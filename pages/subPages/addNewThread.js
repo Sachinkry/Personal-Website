@@ -1,38 +1,30 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 export default function AddNewThread() {
     const [title, setTitle] = useState('');
     const [url, setUrl] = useState('');
     const [date, setDate] = useState('');
-    const [threads, setThreads] = useState([]);
     const [goToThreads, setGoToThreads] = useState(false);
     const router = useRouter();
 
-    async function createThread(e) {
-        e.preventDefault();
-
-        try {
-            const { data } = await axios.post('/api/thread', {
-                title,
-                url,
-                date,
-            })
-
-            // console.log("thread data sent", data);
-            console.log(title, url, date);
-            setGoToThreads(true);
-        } catch (error) {
-            console.log("failed to create thread", error);
+    useEffect(() => {
+        if (goToThreads) {
+          router.push('/writes');
         }
-
-    }
-
-    if (goToThreads) {
-        router.push('/writes');
-    }
+      }, [goToThreads, router]);
+    
+    const createThread = async (e) => {
+      e.preventDefault();
+      router.push('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+    //   try {
+    //     await axios.post('/api/thread', { title, url, date });
+    //     setGoToThreads(true);
+    //   } catch (error) {
+    //     console.error('Failed to create thread:', error);
+    //   }
+    };
 
     return (
         <div className='flex flex-col m-3 '>

@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-
-import Navbar from '../components/Navbar';
 import LastUpdate from '../components/LastUpdate';
 import Layout from '../components/Layout';
 
@@ -10,15 +8,24 @@ function Builds() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    try {
-      axios.get('api/project').then((res) => {
-        const projects = res.data;
-        setProjects(projects);
-        setIsLoading(false);
+    let isCancelled = false;
+    
+    axios.get('api/project')
+      .then((res) => {
+        if (!isCancelled) {
+          setProjects(res.data);
+          setIsLoading(false);
+        }
+      })
+      .catch((error) => {
+        if (!isCancelled) {
+          console.log('Error:', error);
+        }
       });
-    } catch (error) {
-      console.log('Error from projects-api:', error);
-    }
+      
+    return () => {
+      isCancelled = true;
+    };
   }, []);
 
   return (
@@ -33,13 +40,13 @@ function Builds() {
           <div className="flex flex-col items-center justify-start  leading-snug w-full">
             <div className="inline-flex flex-col space-y-5 items-center justify-start  leading-snug">
               <div className="space-y-5">
-                <p className="w-full text-4xl font-semibold leading-snug text-gray-600 capitalize mb-10">Projects</p>
-                <div className="space-y-5">
+                <p className="w-full text-4xl font-semibold leading-snug text-gray-600 dark:text-gray-700 capitalize mb-10">Projects</p>
+                <div className="projects space-y-5">
                   {projects.map((project, i) => (
                     <div key={i}>
-                      <p className="w-full leading-snug text-darkGray">
+                      <p className="w-full leading-snug text-darkGray dark:text-gray-500">
                         <span>
-                          <a className="text-mediumGreen underline underline-offset-2 cursor-pointer" href={project.url}>
+                          <a className="text-mediumGreen  underline-offset-2 cursor-pointer" href={project.url}>
                             {project.name}
                           </a>
                         </span>
@@ -49,7 +56,7 @@ function Builds() {
                   ))}
                 </div>
                 <p className="text-mediumGreen">
-                  See more on GitHub... <a className="underline underline-offset-2" href="https://github.com/Sachinkry">[here]</a>
+                  <a className="" href="https://github.com/Sachinkry">See more on GitHub...</a>
                 </p>
               </div>
             </div>

@@ -1,35 +1,25 @@
-import { connectDB } from '../../utils/db';
+import connectDB from '../../utils/db';
 import Project from '../../models/projectSchema';
 import mongoose from 'mongoose';
 
 export default async function handler(req, res) {
+  if (!mongoose.connections[0].readyState) await connectDB();
+
   const { method } = req;
-  // await connectDB();
-  // instead of using connectDB() we can use this to avoid the error status code 500
-  if (!mongoose.connections[0].readyState) {
-    await connectDB();
-  }
 
   try {
-
     if (method === 'GET') {
+      res.setHeader('Cache-Control', 'public, max-age=3600');
       const projects = await Project.find({});
-      res.json(projects);
+      return res.status(200).json(projects);
     }
 
     if (method === 'POST') {
       const { name, description, url } = req.body;
-      console.log(name, description, url);
-      const newProject = new Project({
-        name,
-        description,
-        url,
-      });
-
-      // console.log('New project:', newProject);
-      res.json(await newProject.save());
+      const newProject = new Project({ name, description, url });
+      return res.status(201).json(await newProject.save());
     }
   } catch (error) {
-    res.status(500).json({ message: 'Server Error', error });
+    return res.status(500).json({ message: 'Server Error', error });
   }
 }

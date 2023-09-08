@@ -5,7 +5,7 @@ function MyApp({ Component, pageProps }) {
   
   return (
     <ThemeProvider attribute="class" enableSystem={true}>
-      <Component {...pageProps} />
+        <Component {...pageProps} />
     </ThemeProvider>
   )
 }

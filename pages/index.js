@@ -28,21 +28,18 @@ export default function Home() {
   
   return (
     <Layout>
-      <div className="flex flex-col space-y-10 items-start justify-center">
+      <div className="flex flex-col space-y-8 items-start  ">
         
-        <div className='w-full flex text-4xl'>
           <ImagePic />
-          {/* {quote} */}
-          {/* <h1 className='text-4xl font-semibold leading-snug text-gray-600'>Me</h1> */}
-        </div>
+          
         <div className="flex flex-col space-y-4 items-center justify-center w-full ">
-            <p className="">Hi there  👋, this is <span className='font-semibold'>Sachin Yadav</span>. It&apos;s great to have you here. Come on in and explore my digital realm to your heart&apos;s content.</p>
+            <p className=" dark:text-gray-500 ">Hi there  👋, this is <span className='font-semibold'>Sachin Yadav</span>. It&apos;s great to have you here. Come on in and explore my digital realm to your heart&apos;s content.</p>
             
-            <p className="">I cherish the fondness I developed for coding last year to create useful and fun projects. This year, I would explore AI and ML: LLMs, and share my learnings, insights and random musings. </p>
+            <p className=" dark:text-gray-500">I cherish the fondness I developed for coding last year to create useful and fun projects. This year, I would explore AI and ML: LLMs, and share my learnings, insights and random musings. </p>
            
-            <p className="">When I do not code, I read <a href={adminData.goodreads} className='text-mediumGreen underline'>books</a>, listen to <a href={adminData.music} className='text-mediumGreen underline'>music</a>, watch anime, <a href={adminData.drawing} className='text-mediumGreen underline'>draw</a> simple stuffs, or scribble down my thoughts.</p>
+            <p className=" dark:text-gray-500">When I do not code, I read <a href={adminData.goodreads} className='text-mediumGreen '>books</a>, listen to <a href={adminData.music} className='text-mediumGreen '>music</a>, watch anime, <a href={adminData.drawing} className='text-mediumGreen '>draw</a> simple stuffs, or scribble down my thoughts.</p>
             
-            <p className="">If you would like to get in touch or just wanna say &apos;how u doin...&apos;, reach out to me on the bird app <a href={adminData.twitter} className='text-mediumGreen underline'>@SachinKry</a> or mail me: <a href={`mailto:${adminData.email}`} className='text-mediumGreen underline'>heysachinky@gmail.com</a></p>
+            <p className=" dark:text-gray-500">If you would like to get in touch or just wanna say &apos;hello&apos;, reach out to me on the bird app <a href={adminData.twitter} className="text-mediumGreen ">@SachinKry</a> or mail me: <a href={`mailto:${adminData.email}`} className="text-mediumGreen" >heysachinky@gmail.com</a></p>
         </div>
       </div>
       <LastUpdate />

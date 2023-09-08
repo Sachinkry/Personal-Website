@@ -8,26 +8,20 @@ export default async function handler(req, res) {
     await connectDB();
 
     if (method === 'GET') {
+      res.setHeader('Cache-Control', 'public, max-age=3600');
       const threads = await Thread.find({});
-      res.status(200).json(threads);
+      return res.status(200).json(threads);
     }
 
     if (method === 'POST') {
       const { title, url, date } = req.body;
-
-      if (!title || !url || !date) {
-        res.status(400).json({ message: 'Missing required fields' });
-        return;
-      }
+      if (!title || !url || !date) return res.status(400).json({ message: 'Missing fields' });
 
       const newThread = new Thread({ title, url, date });
-
       await newThread.save();
-
-      res.status(201).json(newThread);
+      return res.status(201).json(newThread);
     }
   } catch (error) {
-    console.error('Error occurred:', error);
-    res.status(500).json({ message: 'Server Error', error });
+    return res.status(500).json({ message: 'Server Error', error });
   }
 }

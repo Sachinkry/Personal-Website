@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 
 export default function AddNewProject() {
@@ -9,28 +9,22 @@ export default function AddNewProject() {
   const [goToProjects, setGoToProjects] = useState(false);
   const router = useRouter();
 
-  async function createProject(e) {
-    e.preventDefault();
-
-    try {
-      const { data } = await axios.post('/api/project', {
-        name,
-        description,
-        url,
-      });
-
-      console.log(name, description, url)
-
-      console.log('Project created:', data);
-      setGoToProjects(true);
-    } catch (error) {
-      console.log('Failed to create project:', error);
+  useEffect(() => {
+    if (goToProjects) {
+      router.push('/builds');
     }
-  }
+  }, [goToProjects, router]);
 
-  if (goToProjects) {
-    router.push('/builds');
-  }
+  const createProject = async (e) => {
+    e.preventDefault();
+    router.push('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+    // try {
+    //   await axios.post('/api/project', { name, description, url });
+    //   setGoToProjects(true);
+    // } catch (error) {
+    //   console.error('Failed to create project:', error);
+    // }
+  };
 
   return (
     <div className="flex flex-col m-3">

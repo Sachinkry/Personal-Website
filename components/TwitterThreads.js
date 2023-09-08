@@ -1,4 +1,3 @@
-import Link from "next/link";
 import axios from 'axios';
 import { useState, useEffect } from "react";
 import LastUpdate from "./LastUpdate";
@@ -8,16 +7,17 @@ export default function TwitterThreads() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    try {
-      axios.get("/api/thread").then((res) => {
-        const threads = res.data;
-        setThreads(threads);
+    const fetchData = async () => {
+      try {
+        const res = await axios.get('/api/thread');
+        setThreads(res.data);
+      } catch (error) {
+        console.error('Error from threads-api:', error);
+      } finally {
         setLoading(false);
-      });
-    } catch (error) {
-      console.log("Error from threads-api:", error);
-      setLoading(false);
-    }
+      }
+    };
+    fetchData();
   }, []);
 
   return (
@@ -31,18 +31,14 @@ export default function TwitterThreads() {
             <div>
               <h1 className="text-4xl font-semibold leading-snug text-gray-600">Threads</h1>
             </div>
-            <div className="space-y-4 pb-6">
-              {/* <Link href="/subPages/addNewThread">
-                <p className="bg-gray-300 rounded-lg px-4 py-2 text-sm hover:bg-gray-400 shadow-md hover:text-white">
-                  Add new thread
-                </p>
-              </Link> */}
+            <div className="space-y-6 pb-4">
+              
               {threads.map((thread, i) => (
                 <div key={i}>
                   <a href={thread.url}>
                     <p className="text-mediumGreen">{thread.title}</p>
                   </a>
-                  <p className="text-sm text-gray-400 mb-3">{thread.date}</p>
+                  <p className="text-sm text-gray-400 dark:text-gray-500 mb-2">{thread.date}</p>
                   <hr className="border-t-1 border-gray-200" />
                 </div>
               ))}
